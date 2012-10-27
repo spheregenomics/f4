@@ -1,0 +1,27 @@
+<h1>Lesson</h1>
+<div id="lesson">
+  <p>
+    <b>Lesson:</b>
+    <%= @lesson.lesson_name %>
+  </p>
+  <p>
+    <b>Lesson Type:</b>
+    <%= @lesson_type %>
+  </p>
+  <p>
+    <b>Lesson Status:</b>
+    <%= @lesson_status %>
+  </p>
+  <p>
+    <b>Synopsis:</b>
+    <%= @lesson.synopsis %>
+  </p>
+  
+</div>
+
+
+<%= render 'lesson_layouts_table' %>
+
+<%= link_to 'Back', unit_path(@unit) %> |
+<%= link_to "Edit Lesson", [:edit, @unit, @lesson] %> |
+<%= link_to 'New Lesson Layout', new_lesson_lesson_layout_path(@lesson) %>

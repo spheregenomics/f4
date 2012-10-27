@@ -1,0 +1,53 @@
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :course_name %><br />
+    <%= f.text_field :course_name %>
+  </div>
+  <div class="field">
+    <%= f.label :course_type %><br />
+    <%= f.collection_select :course_type, Lookup.find(:all,:conditions => ["model_name = 'course' and field_name = 'course_type'"]), :id, :lookup_text, include_blank: false,:prompt => "Course Type" %>
+  </div>
+  <div class="field">
+    <%= f.label :synopsis %><br />
+    <%= f.text_field :synopsis %>
+  </div>
+  <div class="field">
+    <%= f.label :course_language %><br />
+    <%= f.collection_select :course_language, Lookup.find(:all,:conditions => ["model_name = 'course' and field_name = 'course_language'"]), :id, :lookup_text, include_blank: false,:prompt => "Language" %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.collection_select :status, Lookup.find(:all,:conditions => ["model_name = 'course' and field_name = 'status'"]), :id, :lookup_text, include_blank: false,:prompt => "Status" %>
+  </div>
+  <div class="field">
+    <%= f.label :target_level %><br />
+     <%= f.collection_select :target_level, Lookup.find(:all,:conditions => ["model_name = 'course' and field_name = 'target_level'"]), :id, :lookup_text, include_blank: false,:prompt => "Level" %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br />
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.number_field :version %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

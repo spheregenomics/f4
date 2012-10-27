@@ -1,0 +1,2 @@
+module JsonCoursesHelper
+end

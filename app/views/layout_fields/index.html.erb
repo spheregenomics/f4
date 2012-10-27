@@ -1,0 +1,27 @@
+<h1>Listing layout_fields</h1>
+
+<table>
+  <tr>
+    <th>Field name</th>
+    <th>Field value</th>
+    <th>Version</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @layout_fields.each do |layout_field| %>
+  <tr>
+    <td><%= layout_field.field_name %></td>
+    <td><%= layout_field.field_value %></td>
+    <td><%= layout_field.version %></td>
+    <td><%= link_to 'Show', layout_field %></td>
+    <td><%= link_to 'Edit', edit_layout_field_path(layout_field) %></td>
+    <td><%= link_to 'Destroy', layout_field, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Layout field', new_layout_field_path %>

@@ -1,0 +1,37 @@
+<h1>Listing layout_tables</h1>
+
+<table>
+  <tr>
+    <th>Table number</th>
+    <th>Row num</th>
+    <th>Col1</th>
+    <th>Col2</th>
+    <th>Col3</th>
+    <th>Col4</th>
+    <th>Version</th>
+    <th>Unit layout</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @layout_tables.each do |layout_table| %>
+  <tr>
+    <td><%= layout_table.table_number %></td>
+    <td><%= layout_table.row_num %></td>
+    <td><%= layout_table.col1 %></td>
+    <td><%= layout_table.col2 %></td>
+    <td><%= layout_table.col3 %></td>
+    <td><%= layout_table.col4 %></td>
+    <td><%= layout_table.version %></td>
+    <td><%= layout_table.unit_layout %></td>
+    <td><%= link_to 'Show', layout_table %></td>
+    <td><%= link_to 'Edit', edit_layout_table_path(layout_table) %></td>
+    <td><%= link_to 'Destroy', layout_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Layout table', new_layout_table_path %>

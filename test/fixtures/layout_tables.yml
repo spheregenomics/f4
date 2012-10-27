@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  table_number: 1
+  row_num: 1
+  col1: MyString
+  col2: MyString
+  col3: MyString
+  col4: MyString
+  version: 1
+  unit_layout: 
+
+two:
+  table_number: 1
+  row_num: 1
+  col1: MyString
+  col2: MyString
+  col3: MyString
+  col4: MyString
+  version: 1
+  unit_layout: 

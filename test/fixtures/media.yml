@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  media_filename: MyString
+  file_bitmap: 1
+  media_name: MyString
+  description: MyText
+  media_catagory: 
+
+two:
+  media_filename: MyString
+  file_bitmap: 1
+  media_name: MyString
+  description: MyText
+  media_catagory: 

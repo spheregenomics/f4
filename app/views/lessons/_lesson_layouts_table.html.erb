@@ -1,0 +1,28 @@
+<h1>Lesson Layouts for <%= @lesson.lesson_name %></h1>
+
+<table id="lesson_layouts">
+  <thead>
+  <tr>
+    <th>Device Type</th>
+    <th>Seq</th>
+    <th>Layout Type</th>
+    <th>Version</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+<tbody>  
+<% @lesson.lesson_layouts.each do |lesson_layout| %>
+  <tr>
+    <td><%= link_to Lookup.where(:id => lesson_layout.device_type).pluck(:lookup_text)[0], [@lesson, lesson_layout] %></td>
+    <td><%= lesson_layout.seq %></td>
+    <td><%= Lookup.where(:id => lesson_layout.layout_type).pluck(:lookup_text)[0] %>
+    <td><%= lesson_layout.version %></td>
+    <td><%= link_to 'Edit', edit_lesson_lesson_layout_path(@lesson, lesson_layout ) %></td>
+    <td><%= link_to "Delete", [@lesson, lesson_layout], :method => :delete, :confirm => "Are you sure you want to delete this lesson layout?" %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<br />

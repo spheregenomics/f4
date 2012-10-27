@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  seq: 1
+  description: MyText
+  version: 1
+  course: 
+
+two:
+  seq: 1
+  description: MyText
+  version: 1
+  course: 

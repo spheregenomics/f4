@@ -1,0 +1,19 @@
+<%= form_for [@lesson_layout, @layout_field] do |f| %>
+
+  <div class="field">
+    <%= f.label :field_name %><br />
+    <%= f.text_field :field_name %>
+  </div>
+  <div class="field">
+    <%= f.label :field_value %><br />
+    <%= f.text_field :field_value %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.number_field :version %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

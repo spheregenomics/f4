@@ -1,0 +1,33 @@
+<h1>Table Data</h1>
+<table id="table_data">
+  <thead>
+  <tr>
+    <th>Table Number</th>
+    <th>Row</th>
+    <th>Column 1</th>
+    <th>Column 2</th>
+    <th>Column 3</th>
+    <th>Column 4</th>
+    <th>Version</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+<tbody>  
+<% @lesson_layout.layout_tables.each do |layout_table| %>
+  <tr>
+    <td><%= layout_table.table_number %></td>
+    <td><%= layout_table.row_num %></td>
+    <td><%= layout_table.col1 %></td>
+    <td><%= layout_table.col2 %></td>
+    <td><%= layout_table.col3 %></td>
+    <td><%= layout_table.col4 %></td>
+    <td><%= layout_table.version %></td>
+    <td><%= link_to 'Edit', edit_lesson_layout_layout_table_path(@lesson_layout, layout_table ) %></td>
+    <td><%= link_to "Delete", [@lesson_layout, layout_table], :method => :delete, :confirm => "Are you sure you want to delete this layout table?" %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<br />

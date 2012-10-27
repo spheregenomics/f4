@@ -1,0 +1,26 @@
+<%= form_for [@unit, @lesson] do |f| %>
+  <div class="field">
+    <%= f.label :seq %>
+    <%= f.text_field :seq %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :lesson_name %>
+    <%= f.text_field :lesson_name %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :synopsis %>
+    <%= f.text_field :synopsis %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :lesson_type %>
+    <%= f.collection_select :lesson_type, Lookup.find(:all,:conditions => ["model_name = 'lesson' and field_name = 'lesson_type'"]), :id, :lookup_text, include_blank: false,:prompt => "Lesson Type" %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.collection_select :status, Lookup.find(:all,:conditions => ["model_name = 'lesson' and field_name = 'status'"]), :id, :lookup_text, include_blank: false,:prompt => "Status" %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

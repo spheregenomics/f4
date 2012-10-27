@@ -1,0 +1,54 @@
+<h1>Course</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Course name:</b>
+  <%= @course.course_name %>
+</p>
+
+<p>
+  <b>Course type:</b>
+  <%= @course_type %>
+</p>
+
+<p>
+  <b>Synopsis:</b>
+  <%= @course.synopsis %>
+</p>
+
+<p>
+  <b>Course language:</b>
+  <%= @language %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @status %>
+</p>
+
+<p>
+  <b>Target level:</b>
+  <%= @target_level %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @course.owner %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @course.description %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @course.version %>
+</p>
+
+<%= render 'units_table' %>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'New Unit', new_course_unit_path(@course) %> |
+<%= link_to 'Back', courses_path %>

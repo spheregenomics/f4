@@ -1,0 +1,22 @@
+<%= form_for [@lesson, @lesson_layout] do |f| %>
+  <div class="field">
+    <%= f.label :device_type %>
+    <%= f.collection_select :device_type, Lookup.find(:all,:conditions => ["model_name = 'lesson_layout' and field_name = 'device_type'"]), :id, :lookup_text, include_blank: false,:prompt => "Device" %>
+  </div>  
+  <div class="field">
+    <%= f.label :seq %>
+    <%= f.text_field :seq %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :layout_type %>
+    <%= f.collection_select :layout_type, Lookup.find(:all,:conditions => ["model_name = 'lesson_layout' and field_name = 'layout_type'"]), :id, :lookup_text, include_blank: false,:prompt => "Layout" %>
+  </div>
+  <div class="field">
+     <%= f.label :version %><br />
+     <%= f.number_field :version %>
+   </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  unit_name: MyString
+  unit_type: MyString
+  seq: 1
+  synopsis: MyString
+  status: MyString
+  description: MyText
+  version: 1
+  course: 
+
+two:
+  unit_name: MyString
+  unit_type: MyString
+  seq: 1
+  synopsis: MyString
+  status: MyString
+  description: MyText
+  version: 1
+  course: 

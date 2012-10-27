@@ -1,0 +1,26 @@
+<%= form_for [@course, @unit] do |f| %>
+  <div class="field">
+    <%= f.label :seq %>
+    <%= f.text_field :seq %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :unit_name %>
+    <%= f.text_field :unit_name %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :synopsis %>
+    <%= f.text_field :synopsis %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :unit_type %>
+    <%= f.collection_select :unit_type, Lookup.find(:all,:conditions => ["model_name = 'unit' and field_name = 'unit_type'"]), :id, :lookup_text, include_blank: false,:prompt => "Unit Type" %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.collection_select :status, Lookup.find(:all,:conditions => ["model_name = 'unit' and field_name = 'status'"]), :id, :lookup_text, include_blank: false,:prompt => "Status" %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,36 @@
+<h1>Lesson Layout</h1>
+<div id="lesson_layout">
+  <h2>Lesson Layout</h2>
+  <p>
+    <b>Seq:</b>
+    <%= @lesson_layout.seq %>
+  </p>
+  <p>
+    <b>Device Type:</b>
+    <%= @device_type %>
+  </p>
+  <p>
+    <b>Layout Type:</b>
+    <%= @layout_type %>
+  </p>
+  <p>
+    <b>Version:</b>
+    <%= @lesson_layout.version %>
+  </p>
+</div>
+
+<% case @layout_type %>
+<% when "iPhone Learn Type 1", "iPhone Learn Type 2" %>
+  <%= render 'layout_fields_table' %>
+  <%= link_to 'Back', lesson_path(@lesson) %> |
+  <%= link_to "Edit Lesson Layout", [:edit, @lesson, @lesson_layout] %> |
+  <%= link_to 'New Layout Field', new_lesson_layout_layout_field_path(@lesson_layout) %>
+<% when "iPhone Learn Type 3", "iPhone Learn Type 4", "iPhone Learn Type 5" %>
+  <%= render 'layout_tables_table' %>
+  <%= link_to 'Back', lesson_path(@lesson) %> |
+  <%= link_to "Edit Lesson Layout", [:edit, @lesson, @lesson_layout] %> |
+  <%= link_to 'New Layout Table', new_lesson_layout_layout_table_path(@lesson_layout) %>
+<% end %>
+
+
+

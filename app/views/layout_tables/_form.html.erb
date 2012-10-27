@@ -1,0 +1,35 @@
+<%= form_for [@lesson_layout, @layout_table] do |f| %>
+
+  <div class="field">
+    <%= f.label :table_number %><br />
+    <%= f.number_field :table_number %>
+  </div>
+  <div class="field">
+    <%= f.label :row_num %><br />
+    <%= f.number_field :row_num %>
+  </div>
+  <div class="field">
+    <%= f.label :col1 %><br />
+    <%= f.text_field :col1 %>
+  </div>
+  <div class="field">
+    <%= f.label :col2 %><br />
+    <%= f.text_field :col2 %>
+  </div>
+  <div class="field">
+    <%= f.label :col3 %><br />
+    <%= f.text_field :col3 %>
+  </div>
+  <div class="field">
+    <%= f.label :col4 %><br />
+    <%= f.text_field :col4 %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.number_field :version %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

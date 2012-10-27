@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  device_type: MyString
+  seq: 1
+  layout_type: MyString
+  version: 1
+  lesson: 
+
+two:
+  device_type: MyString
+  seq: 1
+  layout_type: MyString
+  version: 1
+  lesson: 

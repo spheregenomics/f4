@@ -1,0 +1,27 @@
+<h1>Unit</h1>
+<div id="unit">
+  <p>
+    <b>Unit:</b>
+    <%= @unit.unit_name %>
+  </p>
+  <p>
+    <b>Unit Type:</b>
+    <%= @unit_type %>
+  </p>
+  <p>
+    <b>Unit Status:</b>
+    <%= @unit_status %>
+  </p>
+  <p>
+    <b>Synopsis:</b>
+    <%= @unit.synopsis %>
+  </p>
+  
+</div>
+
+
+<%= render 'lessons_table' %>
+
+<%= link_to 'Back', course_path(@course) %> |
+<%= link_to "Edit Unit", [:edit, @course, @unit] %> |
+<%= link_to 'New Lesson', new_unit_lesson_path(@unit) %>

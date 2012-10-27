@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lesson_name: MyString
+  lesson_type: MyString
+  seq: 1
+  synopsis: MyString
+  status: MyString
+  description: MyText
+  version: 1
+  course: 
+
+two:
+  lesson_name: MyString
+  lesson_type: MyString
+  seq: 1
+  synopsis: MyString
+  status: MyString
+  description: MyText
+  version: 1
+  course: 
