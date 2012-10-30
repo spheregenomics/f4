@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  word_fluent: MyString
+  fluent_language: MyString
+  word_foreign: MyString
+  foreign_language: MyString
+
+two:
+  word_fluent: MyString
+  fluent_language: MyString
+  word_foreign: MyString
+  foreign_language: MyString

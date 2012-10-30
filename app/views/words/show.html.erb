@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Word fluent:</b>
+  <%= @word.word_fluent %>
+</p>
+
+<p>
+  <b>Fluent language:</b>
+  <%= @word.fluent_language %>
+</p>
+
+<p>
+  <b>Word foreign:</b>
+  <%= @word.word_foreign %>
+</p>
+
+<p>
+  <b>Foreign language:</b>
+  <%= @word.foreign_language %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>

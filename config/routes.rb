@@ -1,5 +1,9 @@
 F4::Application.routes.draw do
 
+  resources :sentences
+
+  resources :words
+
   resources :lookups
 
   resources :courses do

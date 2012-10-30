@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sentence_from: 1
+  sentence_to: 1
+
+two:
+  sentence_from: 1
+  sentence_to: 1
