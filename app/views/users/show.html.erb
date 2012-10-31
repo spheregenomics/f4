@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User name:</b>
+  <%= @user.user_name %>
+</p>
+
+<p>
+  <b>Diaspora login:</b>
+  <%= @user.diaspora_login %>
+</p>
+
+<p>
+  <b>Shapado login:</b>
+  <%= @user.shapado_login %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

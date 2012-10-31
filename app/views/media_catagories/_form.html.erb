@@ -1,0 +1,34 @@
+<%= form_for(@media_catagory) do |f| %>
+  <% if @media_catagory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@media_catagory.errors.count, "error") %> prohibited this media_catagory from being saved:</h2>
+
+      <ul>
+      <% @media_catagory.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :seq %><br />
+    <%= f.number_field :seq %>
+  </div>
+  <div class="field">
+    <%= f.label :media_cat %><br />
+    <%= f.text_field :media_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.number_field :version %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<h1>Media</h1>
+<div id="media">
+  <p>
+    <b>Seq:</b>
+    <%= @media.seq %>
+  </p>
+  <p>
+    <b>Media Name:</b>
+    <%= @media.media_name %>
+  </p>
+  <p>
+    <b>Media Filename:</b>
+    <%= @media.media_filename %>
+  </p>
+  <p>
+    <b>File Bitfield:</b>
+    <%= @media.file_bitmap %>
+  </p>
+  <p>
+    <b>Description:</b>
+    <%= @media.description %>
+  </p>
+</div>
+
+
+
+<%= link_to 'Back', media_catagory_path(@media_catagory) %> |
+<%= link_to "Edit Media", [:edit, @media_catagory, @media] %> |

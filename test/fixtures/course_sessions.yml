@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  course_status: MyString
+  session_type: MyString
+  start_date: 2012-10-31 16:38:09
+  end_date: 2012-10-31 16:38:09
+  max_students: 1
+
+two:
+  course_status: MyString
+  session_type: MyString
+  start_date: 2012-10-31 16:38:09
+  end_date: 2012-10-31 16:38:09
+  max_students: 1

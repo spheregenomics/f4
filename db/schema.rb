@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121029200128) do
+ActiveRecord::Schema.define(:version => 20121031154007) do
+
+  create_table "badges", :force => true do |t|
+    t.string   "badge_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "course_session_enrollments", :force => true do |t|
+    t.integer  "course_session_id"
+    t.integer  "user_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "course_session_enrollments", ["course_session_id"], :name => "index_course_session_enrollments_on_course_session_id"
+  add_index "course_session_enrollments", ["user_id"], :name => "index_course_session_enrollments_on_user_id"
+
+  create_table "course_sessions", :force => true do |t|
+    t.string   "course_status"
+    t.string   "session_type"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "max_students"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "courses", :force => true do |t|
     t.string   "course_name"
@@ -97,12 +123,14 @@ ActiveRecord::Schema.define(:version => 20121029200128) do
     t.integer  "media_catagory_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "seq"
   end
 
   add_index "media", ["media_catagory_id"], :name => "index_media_on_media_catagory_id"
 
   create_table "media_catagories", :force => true do |t|
     t.integer  "seq"
+    t.string   "media_cat"
     t.text     "description"
     t.integer  "version"
     t.integer  "course_id"
@@ -111,6 +139,26 @@ ActiveRecord::Schema.define(:version => 20121029200128) do
   end
 
   add_index "media_catagories", ["course_id"], :name => "index_media_catagories_on_course_id"
+
+  create_table "media_sentence_xrefs", :force => true do |t|
+    t.integer  "media_id"
+    t.integer  "sentence_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "media_sentence_xrefs", ["media_id"], :name => "index_media_sentence_xrefs_on_media_id"
+  add_index "media_sentence_xrefs", ["sentence_id"], :name => "index_media_sentence_xrefs_on_sentence_id"
+
+  create_table "sentence_tag_xrefs", :force => true do |t|
+    t.integer  "sentence_id"
+    t.integer  "tag_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "sentence_tag_xrefs", ["sentence_id"], :name => "index_sentence_tag_xrefs_on_sentence_id"
+  add_index "sentence_tag_xrefs", ["tag_id"], :name => "index_sentence_tag_xrefs_on_tag_id"
 
   create_table "sentence_tags", :force => true do |t|
     t.integer  "sentence_id"
@@ -145,6 +193,14 @@ ActiveRecord::Schema.define(:version => 20121029200128) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "tags", :force => true do |t|
+    t.string   "tag"
+    t.string   "tag_type"
+    t.integer  "tag_system_bitmap"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
   create_table "units", :force => true do |t|
     t.string   "unit_name"
     t.string   "unit_type"
@@ -159,6 +215,24 @@ ActiveRecord::Schema.define(:version => 20121029200128) do
   end
 
   add_index "units", ["course_id"], :name => "index_units_on_course_id"
+
+  create_table "user_badge_xrefs", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "badge_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "user_badge_xrefs", ["badge_id"], :name => "index_user_badge_xrefs_on_badge_id"
+  add_index "user_badge_xrefs", ["user_id"], :name => "index_user_badge_xrefs_on_user_id"
+
+  create_table "users", :force => true do |t|
+    t.string   "user_name"
+    t.string   "diaspora_login"
+    t.string   "shapado_login"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "words", :force => true do |t|
     t.string   "word_fluent"

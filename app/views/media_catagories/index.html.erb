@@ -1,0 +1,35 @@
+<h1>Listing media_catagories</h1>
+
+
+<table id="media_catagories">
+<thead>
+  <tr>
+    <th>Seq</th>
+    <th>Media cat</th>
+    <th>Description</th>
+    <th>Version</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+
+<tbody>
+<% @media_catagories.each do |media_catagory| %>
+  <tr>
+    <td><%= media_catagory.seq %></td>
+    <td><%= media_catagory.media_cat %></td>
+    <td><%= media_catagory.description %></td>
+    <td><%= media_catagory.version %></td>
+    <td><%= link_to 'Show', media_catagory %></td>
+    <td><%= link_to 'Edit', edit_media_catagory_path(media_catagory) %></td>
+    <td><%= link_to 'Destroy', media_catagory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Media Catagory', new_media_catagory_path %>
+<%= link_to 'Courses', courses_path %>

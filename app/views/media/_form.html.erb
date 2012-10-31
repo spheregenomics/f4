@@ -1,0 +1,25 @@
+<%= form_for [@media_catagory, @media] do |f| %>
+  <div class="field">
+    <%= f.label :seq %>
+    <%= f.text_field :seq %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :media_name %>
+    <%= f.text_field :media_name %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :media_filename %>
+    <%= f.text_field :media_filename %><br/>
+  </div>
+  <div class="field">
+    <%= f.label :file_bitmap %>
+    <%= f.text_field :file_bitmap %><br/>
+  </div>
+  <div class="field">
+     <%= f.label :description %><br/>
+     <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tag: MyString
+  tag_type: MyString
+  tag_system_bitmap: 1
+
+two:
+  tag: MyString
+  tag_type: MyString
+  tag_system_bitmap: 1

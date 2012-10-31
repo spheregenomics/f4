@@ -1,4 +1,4 @@
 class MediaCatagory < ActiveRecord::Base
-  belongs_to :course
-  attr_accessible :description, :seq, :version
+  has_many :media, :dependent => :destroy
+  attr_accessible :description, :media_cat, :seq, :version
 end

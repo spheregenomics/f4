@@ -1,5 +1,11 @@
 F4::Application.routes.draw do
 
+  resources :badges
+
+  resources :users
+
+  resources :tags
+
   resources :sentences
 
   resources :words
@@ -8,8 +14,13 @@ F4::Application.routes.draw do
 
   resources :courses do
     resources :units
-    resources :media
+    resources :course_sessions
   end
+  
+  resources :course_sessions do
+    resources :course_session_enrollments
+  end
+  
   
   resources :units do
     resources :lessons
@@ -24,8 +35,8 @@ F4::Application.routes.draw do
     resources :layout_tables
   end
   
-  resources :media do
-     resources :media_catagories
+  resources :media_catagories do
+     resources :media
    end
     
   root :to => 'courses#index'

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Seq:</b>
+  <%= @media_catagory.seq %>
+</p>
+
+<p>
+  <b>Media cat:</b>
+  <%= @media_catagory.media_cat %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @media_catagory.description %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @media_catagory.version %>
+</p>
+
+<%= render 'media_table' %>
+
+<br>
+<%= link_to 'Edit', edit_media_catagory_path(@media_catagory) %> |
+<%= link_to 'New Media Catagory', new_media_catagory_media_path(@media_catagory) %> |
+<%= link_to 'Back', media_catagories_path %>
+

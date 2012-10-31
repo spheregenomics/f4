@@ -2,12 +2,14 @@
 
 one:
   seq: 1
+  media_cat: MyString
   description: MyText
   version: 1
   course: 
 
 two:
   seq: 1
+  media_cat: MyString
   description: MyText
   version: 1
   course: 

@@ -1,0 +1,31 @@
+<h1>Listing course_sessions</h1>
+
+<table>
+  <tr>
+    <th>Course status</th>
+    <th>Session type</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Max students</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @course_sessions.each do |course_session| %>
+  <tr>
+    <td><%= course_session.course_status %></td>
+    <td><%= course_session.session_type %></td>
+    <td><%= course_session.start_date %></td>
+    <td><%= course_session.end_date %></td>
+    <td><%= course_session.max_students %></td>
+    <td><%= link_to 'Show', course_session %></td>
+    <td><%= link_to 'Edit', edit_course_session_path(course_session) %></td>
+    <td><%= link_to 'Destroy', course_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Course session', new_course_session_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Course status:</b>
+  <%= @course_session.course_status %>
+</p>
+
+<p>
+  <b>Session type:</b>
+  <%= @course_session.session_type %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @course_session.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @course_session.end_date %>
+</p>
+
+<p>
+  <b>Max students:</b>
+  <%= @course_session.max_students %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_session_path(@course_session) %> |
+<%= link_to 'Back', course_sessions_path %>
