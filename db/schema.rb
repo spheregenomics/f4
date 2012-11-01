@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031163837) do
+ActiveRecord::Schema.define(:version => 20121101201933) do
 
   create_table "badges", :force => true do |t|
     t.string   "badge_name"
@@ -62,8 +62,6 @@ ActiveRecord::Schema.define(:version => 20121031163837) do
     t.datetime "updated_at",       :null => false
   end
 
-  add_index "layout_fields", ["lesson_layout_id"], :name => "index_layout_fields_on_lesson_layout_id"
-
   create_table "layout_tables", :force => true do |t|
     t.integer  "table_number"
     t.integer  "row_num"
@@ -77,19 +75,18 @@ ActiveRecord::Schema.define(:version => 20121031163837) do
     t.datetime "updated_at",       :null => false
   end
 
-  add_index "layout_tables", ["lesson_layout_id"], :name => "index_layout_tables_on_lesson_layout_id"
-
   create_table "lesson_layouts", :force => true do |t|
-    t.string   "device_type"
+    t.string   "lesson_name"
+    t.string   "lesson_type"
     t.integer  "seq"
-    t.string   "layout_type"
+    t.string   "synopsis"
+    t.string   "status"
+    t.text     "description"
     t.integer  "version"
-    t.integer  "lesson_id"
+    t.integer  "unit_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
-
-  add_index "lesson_layouts", ["lesson_id"], :name => "index_lesson_layouts_on_lesson_id"
 
   create_table "lessons", :force => true do |t|
     t.string   "lesson_name"
@@ -103,8 +100,6 @@ ActiveRecord::Schema.define(:version => 20121031163837) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
-
-  add_index "lessons", ["unit_id"], :name => "index_lessons_on_unit_id"
 
   create_table "lookups", :force => true do |t|
     t.string   "field_name"
@@ -120,13 +115,11 @@ ActiveRecord::Schema.define(:version => 20121031163837) do
     t.integer  "file_bitmap"
     t.string   "media_name"
     t.text     "description"
-    t.integer  "media_catagory_id"
+    t.integer  "media_category_id"
+    t.integer  "seq"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.integer  "seq"
   end
-
-  add_index "media", ["media_catagory_id"], :name => "index_media_on_media_catagory_id"
 
   create_table "media_catagories", :force => true do |t|
     t.integer  "seq"
@@ -213,8 +206,6 @@ ActiveRecord::Schema.define(:version => 20121031163837) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
-
-  add_index "units", ["course_id"], :name => "index_units_on_course_id"
 
   create_table "user_badge_xrefs", :force => true do |t|
     t.integer  "user_id"
