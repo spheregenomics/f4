@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121101201933) do
+ActiveRecord::Schema.define(:version => 20121103104726) do
 
   create_table "badges", :force => true do |t|
     t.string   "badge_name"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20121101201933) do
     t.integer  "max_students"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "course_id"
   end
 
   create_table "courses", :force => true do |t|
