@@ -40,13 +40,5 @@ test: &TEST
   username: root
   password: root
 
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: f4_production
-  pool: 5
-  username:
-  password:
-
 cucumber:
   <<: *TEST
