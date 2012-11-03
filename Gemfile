@@ -23,7 +23,7 @@ end
 gem 'railroady'
 gem 'jquery-rails'
 gem 'jquery-datatables-rails'
-gem 'sql-logging'
+gem 'sql-logging', :group => :development
 gem 'debugger'
 gem 'rails-footnotes', '>= 3.7.5.rc4', :group => :development
 
