@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121103104726) do
+ActiveRecord::Schema.define(:version => 20121103164629) do
 
   create_table "badges", :force => true do |t|
     t.string   "badge_name"
@@ -87,6 +87,9 @@ ActiveRecord::Schema.define(:version => 20121103104726) do
     t.integer  "unit_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "device_type"
+    t.integer  "layout_type"
+    t.integer  "lesson_id"
   end
 
   create_table "lessons", :force => true do |t|
@@ -120,6 +123,7 @@ ActiveRecord::Schema.define(:version => 20121103104726) do
     t.integer  "seq"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "media_catagory_id"
   end
 
   create_table "media_catagories", :force => true do |t|
