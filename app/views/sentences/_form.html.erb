@@ -20,6 +20,6 @@
     <%= f.text_field :sentence %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} Sentence", class: 'btn btn-primary' %>
   </div>
 <% end %>

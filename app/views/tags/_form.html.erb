@@ -24,6 +24,6 @@
     <%= f.number_field :tag_system_bitmap %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} Tag", class: 'btn btn-primary' %>
   </div>
 <% end %>

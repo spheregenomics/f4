@@ -16,6 +16,6 @@
     <%= f.text_field :badge_name %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} Badge", class: 'btn btn-primary' %>
   </div>
 <% end %>

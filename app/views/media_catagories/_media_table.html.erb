@@ -14,8 +14,8 @@
       <td><%= media.seq %></td>
       <td><%= link_to media.media_name, [@media_catagory, media] %></td>
       <td><%= media.media_filename %></td>
-      <td><%= link_to 'Edit', edit_media_catagory_media_path(@media_catagory, media) %></td>
-      <td><%= link_to "Delete", [@media_catagory, media], :method => :delete, :confirm => "Are you sure you want to delete this Media?" %></td>
+      <td><%= link_to 'Edit', edit_media_catagory_media_path(@media_catagory, media), class: 'btn' %></td>
+      <td><%= link_to "Delete", [@media_catagory, media], :method => :delete, :confirm => "Are you sure you want to delete this Media?",  class: 'btn' %></td>
     </tr>
   <% end %>
     <br>

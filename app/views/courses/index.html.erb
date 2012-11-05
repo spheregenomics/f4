@@ -29,8 +29,8 @@
     <td><%= course.owner %></td>
     <td><%= course.description %></td>
     <td><%= course.version %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Delete', course, method: :delete, data: { confirm: 'Are you sure you want to delete this course?' } %></td>
+    <td><%= link_to 'Edit', edit_course_path(course), class: 'btn' %></td>
+    <td><%= link_to 'Delete', course, method: :delete, data: { confirm: 'Are you sure you want to delete this course?' }, class: 'btn' %></td>
   </tr>
 <% end %>
 </tbody>
@@ -38,12 +38,12 @@
 
 <br />
 
-<%= link_to 'New Course', new_course_path %><br>
-<%= link_to 'Media Catagories', media_catagories_path %> |
-<%= link_to 'Users', users_path %> |
-<%= link_to 'Sentences', sentences_path %> |
-<%= link_to 'Words', words_path %> |
-<%= link_to 'Badges', badges_path %> |
-<%= link_to 'Tags', tags_path %> 
+<%= link_to 'New Course', new_course_path, class: 'btn' %><br><br />
+<%= link_to 'Media Catagories', media_catagories_path, class: 'btn' %>
+<%= link_to 'Users', users_path, class: 'btn' %>
+<%= link_to 'Sentences', sentences_path, class: 'btn' %>
+<%= link_to 'Words', words_path, class: 'btn' %>
+<%= link_to 'Badges', badges_path, class: 'btn' %>
+<%= link_to 'Tags', tags_path,  class: 'btn' %>
 
 

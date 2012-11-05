@@ -28,6 +28,6 @@
     <%= f.text_field :note %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} Lookup", class: 'btn btn-primary' %>
   </div>
 <% end %>

@@ -20,6 +20,6 @@
      <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} Media", class: 'btn btn-primary' %>
   </div>
 <% end %>

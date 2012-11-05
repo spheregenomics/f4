@@ -48,6 +48,6 @@
     <%= f.number_field :version %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} Course", class: 'btn btn-primary' %>
   </div>
 <% end %>

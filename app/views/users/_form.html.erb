@@ -24,6 +24,6 @@
     <%= f.text_field :shapado_login %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} User", class: 'btn btn-primary' %>
   </div>
 <% end %>

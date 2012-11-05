@@ -1,9 +1,9 @@
 <h1>Listing sentences</h1>
 
-<table>
+<table class="table table-hover">
   <tr>
-    <th>Language</th>
-    <th>Sentence</th>
+    <th width="35%">Language</th>
+    <th width="35%">Sentence</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= sentence.language %></td>
     <td><%= sentence.sentence %></td>
-    <td><%= link_to 'Show', sentence %></td>
-    <td><%= link_to 'Edit', edit_sentence_path(sentence) %></td>
-    <td><%= link_to 'Destroy', sentence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', sentence, class: 'btn' %></td>
+    <td><%= link_to 'Edit', edit_sentence_path(sentence), class: 'btn' %></td>
+    <td><%= link_to 'Destroy', sentence, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Sentence', new_sentence_path %>
+<%= link_to 'New Sentence', new_sentence_path, class: 'btn' %>

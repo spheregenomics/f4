@@ -28,6 +28,6 @@
     <%= f.text_field :foreign_language %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} Word", class: 'btn btn-primary' %>
   </div>
 <% end %>

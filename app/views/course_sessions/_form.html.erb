@@ -32,6 +32,6 @@
     <%= f.number_field :max_students %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{action_name == 'new' ? 'Create' : 'Update'} Course Session", class: 'btn btn-primary' %>
   </div>
 <% end %>
