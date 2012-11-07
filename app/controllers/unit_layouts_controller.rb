@@ -2,6 +2,7 @@ class UnitLayoutsController < ApplicationController
   before_filter :find_unit
   before_filter :find_unit_layout, :only => [:show, :edit, :update, :destroy]
   before_filter :get_lookups, :only => [:show]
+  before_filter :authenticate_user!
   
   def new
     @unit_layout = @unit.unit_layouts.build

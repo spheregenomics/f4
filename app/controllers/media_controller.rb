@@ -1,6 +1,7 @@
 class MediaController < ApplicationController
   before_filter :find_media_catagory
   before_filter :find_media, :only => [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
   
   def new
     @media = @media_catagory.media.build

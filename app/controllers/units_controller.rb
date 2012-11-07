@@ -2,6 +2,7 @@ class UnitsController < ApplicationController
   before_filter :find_course
   before_filter :find_unit, :only => [:show, :edit, :update, :destroy]
   before_filter :get_lookups, :only => [:show]
+  before_filter :authenticate_user!
   
   def new
     @unit = @course.units.build

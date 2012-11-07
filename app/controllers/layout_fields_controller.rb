@@ -1,6 +1,7 @@
 class LayoutFieldsController < ApplicationController
   before_filter :find_lesson_layout
   before_filter :find_layout_field, :only => [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
   
   # GET /layout_fields
   # GET /layout_fields.json

@@ -1,4 +1,6 @@
 class SentencesController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /sentences
   # GET /sentences.json
   def index

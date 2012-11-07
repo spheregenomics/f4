@@ -1,6 +1,7 @@
 class LayoutTablesController < ApplicationController
   before_filter :find_lesson_layout
   before_filter :find_layout_table, :only => [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
   
   # GET /layout_tables
   # GET /layout_tables.json

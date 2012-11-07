@@ -1,4 +1,5 @@
 class LookupsController < ApplicationController
+  before_filter :authenticate_user!
 
   def index
     @lookups = Lookup.all

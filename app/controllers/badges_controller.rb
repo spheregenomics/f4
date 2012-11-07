@@ -1,4 +1,6 @@
 class BadgesController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /badges
   # GET /badges.json
   def index

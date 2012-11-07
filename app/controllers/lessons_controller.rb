@@ -2,7 +2,7 @@ class LessonsController < ApplicationController
     before_filter :find_unit
     before_filter :find_lesson, :only => [:show, :edit, :update, :destroy]
     before_filter :get_lookups, :only => [:show]
-    
+    before_filter :authenticate_user!
   
 
     def new

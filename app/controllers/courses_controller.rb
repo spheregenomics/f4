@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_filter :get_lookups, :only => [:show]
+  before_filter :authenticate_user!
 
   # GET /courses
   # GET /courses.json

@@ -1,4 +1,6 @@
 class MediaCatagoriesController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /media_catagories
   # GET /media_catagories.json
   def index

@@ -2,6 +2,7 @@ class LessonLayoutsController < ApplicationController
   before_filter :find_lesson
   before_filter :find_lesson_layout, :only => [:show, :edit, :update, :destroy]
   before_filter :get_lookups, :only => [:show]
+  before_filter :authenticate_user!
   
   def new
     @lesson_layout = @lesson.lesson_layouts.build
