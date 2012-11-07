@@ -28,12 +28,8 @@
             <ul class="nav" style="float: right;">
               <% if user_signed_in? %>
                 <li id="fat-menu" class="dropdown">
-                  <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Setting <b class="caret"></b></a>
+                  <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %><b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                    <li><a tabindex="-1" href="#">Action</a></li>
-                    <li><a tabindex="-1" href="#">Another action</a></li>
-                    <li><a tabindex="-1" href="#">Something else here</a></li>
-                    <li class="divider"></li>
                     <li><%= link_to "Log out", destroy_user_session_path, :method => :delete, tabindex: "-1"  %></li>
                   </ul>
                 </li>
